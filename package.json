@@ -1,16 +1,22 @@
 {
   "name": "spring-fiesta-2k24",
   "version": "1.0.0",
+  "type": "module",
   "description": "will contain server portion for spring fest's website 2k24",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "build": "echo \"No build step required\""
   },
   "author": "akki-sama",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
     "body-parser": "^1.20.2",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.6.1",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0",
