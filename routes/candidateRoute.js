@@ -2,7 +2,7 @@ import express from "express";
 import db from "../db/db.js";
 import Candidate from '../models/candidate.js';
 import User from '../models/user.js';
-const {createTokenForUser} = require('../models/createToken.js'); 
+import { createTokenForUser } from '../controllers/authentication.js'; 
 const router = express.Router();
 
 //to get all candidates
