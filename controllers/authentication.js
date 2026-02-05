@@ -1,9 +1,11 @@
 import pkg from 'jsonwebtoken';
+import 'dotenv/config';
+
 const { sign, verify } = pkg;
 
 const secret = process.env.SECERT_JWT_TOKEN;
 
-function createTokenForUser(user) {
+export function createTokenForUser(user) {
   //   console.log("token: ", user);
   const payload = {
     id: user._id,
@@ -15,9 +17,9 @@ function createTokenForUser(user) {
   return token;
 }
 
-function validateToken(token) {
+export function validateToken(token) {
   const payload = verify(token, secret);
   return payload;
 }
 
-module.exports ={createTokenForUser, validateToken} ;
+// module.exports ={createTokenForUser, validateToken} ;

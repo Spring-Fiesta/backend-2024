@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
+import 'dotenv/config';
 
 // Define the MongoDB connection URL
-const mongoURL =   'mongodb+srv://prateekjaswal16:V6FkWCmFbzGwDBjR@backenddb.al1rngv.mongodb.net/backend_SF'
+const mongoURL =   process.env.MONGO_URI;
 
 // Set up MongoDB connection
 mongoose.connect(mongoURL)
